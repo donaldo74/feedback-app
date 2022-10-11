@@ -1,10 +1,20 @@
-function Header() {
+import PropTypes from 'prop-types'
+
+function Header({ text }) {
   return (
     <header>
       <div className="container"></div>
-      <h2>Feedback UI</h2>
+      <h2>{text}</h2>
     </header>
   )
+}
+
+Header.defaultProps = {
+  text: 'Feedback UI',
+}
+
+Header.propTypes = {
+  text: PropTypes.string,
 }
 
 export default Header
